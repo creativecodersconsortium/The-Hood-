@@ -13,7 +13,14 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-6">
               <div className="relative h-16 w-16 mr-3">
-                <Image src="/images/the-hood-logo.png" alt="The Hood Logo" fill className="object-contain" />
+                <Image
+                  src="/images/the-hood-logo.png"
+                  alt="The Hood Logo"
+                  width={64}
+                  height={64}
+                  className="object-contain"
+                  unoptimized
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-serif text-2xl">The Hood</span>

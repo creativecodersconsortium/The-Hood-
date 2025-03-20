@@ -1,16 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-
-const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "The Hood - Bir Billing, Himachal Pradesh",
   description: "Stay Cozy Explore Freely. Experience tranquility and adventure in the heart of Himachal Pradesh.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/images/the-hood-logo.png",
   },
     generator: 'v0.dev'
 }
@@ -30,7 +27,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={inter.className}>
+      <body className="font-sans">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {children}
         </ThemeProvider>

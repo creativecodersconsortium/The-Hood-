@@ -43,7 +43,15 @@ export default function Navbar() {
           <Link href="/" className="relative z-10">
             <div className="flex items-center">
               <div className="relative h-16 w-16 mr-3">
-                <Image src="/images/the-hood-logo.png" alt="The Hood Logo" fill className="object-contain" priority />
+                <Image
+                  src="/images/the-hood-logo.png"
+                  alt="The Hood Logo"
+                  width={64}
+                  height={64}
+                  className="object-contain"
+                  priority
+                  unoptimized
+                />
               </div>
               <div className="flex flex-col">
                 <span className={`font-serif text-2xl ${isScrolled ? "text-[#2C5F2D]" : "text-white"}`}>The Hood</span>

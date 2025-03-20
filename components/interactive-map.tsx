@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { MapPin } from "lucide-react"
-import Image from "next/image"
 
 interface Place {
   id: string
@@ -92,13 +91,7 @@ export default function InteractiveMap({ places }: InteractiveMapProps) {
       {/* Visual map representation */}
       <div className="relative h-[300px] bg-[#e8f4f8] p-4">
         <div className="absolute inset-0">
-          <Image
-            src="/images/hotel-badminton.png"
-            alt="Map of Bir Billing area"
-            fill
-            className="object-cover opacity-30"
-          />
-          <div className="absolute inset-0 bg-white/30"></div>
+          <div className="w-full h-full bg-[#e8f4f8]"></div>
         </div>
 
         <div className="absolute inset-0 flex items-center justify-center">

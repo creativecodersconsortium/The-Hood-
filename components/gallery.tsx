@@ -73,6 +73,7 @@ export default function Gallery({ limit }: GalleryProps) {
                 alt={image.alt}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
+                unoptimized
               />
               <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <span className="text-white font-medium">{image.category}</span>
@@ -86,7 +87,13 @@ export default function Gallery({ limit }: GalleryProps) {
         <DialogContent className="max-w-4xl p-0 bg-transparent border-none">
           {selectedImage && (
             <div className="relative h-[80vh] w-full">
-              <Image src={selectedImage || "/placeholder.svg"} alt="Gallery image" fill className="object-contain" />
+              <Image
+                src={selectedImage || "/placeholder.svg"}
+                alt="Gallery image"
+                fill
+                className="object-contain"
+                unoptimized
+              />
             </div>
           )}
         </DialogContent>
