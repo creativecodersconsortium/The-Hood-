@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -8,6 +7,7 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import FadeIn from "@/components/animations/fade-in"
 import BookingWidget from "@/components/booking-widget"
+import SafeImage from "@/components/safe-image"
 
 export default function Home() {
   return (
@@ -17,27 +17,25 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen">
         <div className="absolute inset-0 z-0">
-          <Image
+          <SafeImage
             src="/images/hotel-garden.png"
             alt="The Hood Bir Billing - Garden View"
             fill
             className="object-cover"
             priority
-            unoptimized
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent" />
         </div>
         <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-start">
           <div className="flex items-center mb-6">
             <div className="relative h-32 w-32 mr-4">
-              <Image
+              <SafeImage
                 src="/images/the-hood-logo.png"
                 alt="The Hood Logo"
                 width={128}
                 height={128}
                 className="object-contain"
                 priority
-                unoptimized
               />
             </div>
           </div>
@@ -95,13 +93,12 @@ export default function Home() {
               <div>
                 <div className="flex items-center mb-6">
                   <div className="relative h-20 w-20 mr-4">
-                    <Image
+                    <SafeImage
                       src="/images/the-hood-logo.png"
                       alt="The Hood Logo"
                       width={80}
                       height={80}
                       className="object-contain"
-                      unoptimized
                     />
                   </div>
                   <h2 className="text-4xl md:text-5xl font-serif text-[#2C5F2D]">Welcome</h2>
@@ -124,12 +121,11 @@ export default function Home() {
             </FadeIn>
             <FadeIn delay={0.3}>
               <div className="relative h-[500px] rounded-lg overflow-hidden shadow-lg">
-                <Image
+                <SafeImage
                   src="/images/hotel-front.png"
                   alt="The Hood Bir Billing - Front View"
                   fill
                   className="object-cover"
-                  unoptimized
                 />
               </div>
             </FadeIn>

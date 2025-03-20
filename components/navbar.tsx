@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { usePathname } from "next/navigation"
+import SafeImage from "@/components/safe-image"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -43,14 +43,13 @@ export default function Navbar() {
           <Link href="/" className="relative z-10">
             <div className="flex items-center">
               <div className="relative h-16 w-16 mr-3">
-                <Image
+                <SafeImage
                   src="/images/the-hood-logo.png"
                   alt="The Hood Logo"
                   width={64}
                   height={64}
                   className="object-contain"
                   priority
-                  unoptimized
                 />
               </div>
               <div className="flex flex-col">

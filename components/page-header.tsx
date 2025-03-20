@@ -1,5 +1,5 @@
-import Image from "next/image"
 import FadeIn from "@/components/animations/fade-in"
+import SafeImage from "@/components/safe-image"
 
 interface PageHeaderProps {
   title: string
@@ -11,7 +11,7 @@ export default function PageHeader({ title, subtitle, image }: PageHeaderProps) 
   return (
     <section className="relative h-[45vh] md:h-[55vh] flex items-center">
       <div className="absolute inset-0 z-0">
-        <Image src={image || "/placeholder.svg"} alt={title} fill className="object-cover" priority unoptimized />
+        <SafeImage src={image || "/placeholder.svg"} alt={title} fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent" />
       </div>
       <div className="relative z-10 container mx-auto px-4">
