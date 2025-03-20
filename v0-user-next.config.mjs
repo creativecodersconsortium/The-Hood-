@@ -18,8 +18,10 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  // Add output configuration to ensure static files are properly exported
+  output: 'standalone',
+  // Disable experimental features that might cause issues
   experimental: {
-    // Disable experimental features that might cause issues
     webpackBuildWorker: false,
     parallelServerBuildTraces: false,
     parallelServerCompiles: false,

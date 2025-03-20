@@ -2,7 +2,7 @@ import Link from "next/link"
 import { MapPin, Phone, Mail, Instagram, Facebook, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import SafeImage from "@/components/safe-image"
+import ReliableImage from "@/components/reliable-image"
 
 export default function Footer() {
   return (
@@ -13,7 +13,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-6">
               <div className="relative h-16 w-16 mr-3">
-                <SafeImage
+                <ReliableImage
                   src="/images/the-hood-logo.png"
                   alt="The Hood Logo"
                   width={64}

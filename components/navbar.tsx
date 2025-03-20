@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { usePathname } from "next/navigation"
-import SafeImage from "@/components/safe-image"
+import ReliableImage from "@/components/reliable-image"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -43,7 +43,7 @@ export default function Navbar() {
           <Link href="/" className="relative z-10">
             <div className="flex items-center">
               <div className="relative h-16 w-16 mr-3">
-                <SafeImage
+                <ReliableImage
                   src="/images/the-hood-logo.png"
                   alt="The Hood Logo"
                   width={64}
